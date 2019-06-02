@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/navigation_dashboard"
+            app:startDestination="@id/dashboard">
+
+    <fragment
+            android:id="@+id/dashboard"
+            android:name="cl.ivanmoya.navigationjetpacklatam.navigation.dashboard.Dashboard"
+            android:label="fragment_dashboard"
+            tools:layout="@layout/fragment_dashboard">
+        <action
+                android:id="@+id/action_dashboard_to_navigation_dashboard_details"
+                app:destination="@id/navigation_dashboard_details"/>
+        <action
+                android:id="@+id/action_dashboard_to_navigation_notification"
+                app:destination="@id/navigation_notification"/>
+    </fragment>
+
+    <include app:graph="@navigation/navigation_dashboard_details"/>
+
+    <include app:graph="@navigation/navigation_notification"/>
+
+</navigation>

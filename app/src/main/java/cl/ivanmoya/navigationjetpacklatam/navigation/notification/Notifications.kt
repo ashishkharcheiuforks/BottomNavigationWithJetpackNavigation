@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
 import cl.ivanmoya.navigationjetpacklatam.R
 import kotlinx.android.synthetic.main.fragment_notifications.*
 import kotlin.LazyThreadSafetyMode.NONE
@@ -24,10 +25,9 @@ class Notifications : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         notificationsFragmentLabel.text = title
         openNotificationDetailsButton.setOnClickListener {
-            //            val action = NotificationsDirections.openNotificationDetailsAction()
-//            action.notificationId = "Test"
-//            val navController = Navigation.findNavController(view)
-//            navController.navigate(action)
+            val action = NotificationsDirections.actionNotificationsToNotificationDetails2()
+            val navController = Navigation.findNavController(view)
+            navController.navigate(action)
         }
     }
 }

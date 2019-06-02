@@ -6,7 +6,6 @@ import android.content.ContextWrapper
 import android.view.MenuItem
 import androidx.annotation.IdRes
 import androidx.annotation.NavigationRes
-import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentManager
 import androidx.navigation.findNavController
@@ -84,7 +83,7 @@ class BottomNavController(
 //                        R.anim.nav_default_pop_enter_anim,
 //                        R.anim.nav_default_pop_exit_anim
 //                )
-            .replace(containerId, fragment as Fragment, itemId.toString())
+            .replace(containerId, fragment, itemId.toString())
             .addToBackStack(null)
             .commit()
 

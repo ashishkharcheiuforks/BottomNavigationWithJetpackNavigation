@@ -4,7 +4,8 @@
                                                    xmlns:tools="http://schemas.android.com/tools"
                                                    android:layout_width="match_parent"
                                                    android:layout_height="match_parent"
-                                                   tools:context=".Dashboard">
+                                                   android:background="@color/colorYellow"
+                                                   tools:context=".navigation.dashboard.Dashboard">
 
     <TextView
             android:id="@+id/dashboardFragmentLabel"
@@ -19,7 +20,7 @@
             android:id="@+id/dashboardOpenDetail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Open DashboardDEtail"
+            android:text="Open Dashboard Detail"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -30,7 +31,7 @@
             android:id="@+id/openNavigationNotification"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Open New Navigation"
+            android:text="Open Novification New Navigation"
             app:layout_constraintBottom_toTopOf="@+id/dashboardFragmentLabel"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"

@@ -4,14 +4,16 @@
                                                    xmlns:tools="http://schemas.android.com/tools"
                                                    android:layout_width="match_parent"
                                                    android:layout_height="match_parent"
-                                                   android:background="@color/colorPrimaryDark"
-                                                   tools:context=".DashboardDetails">
+                                                   android:background="@color/colorYellow"
+                                                   tools:context=".navigation.dashboard.DashboardDetails">
 
     <TextView
             android:id="@+id/dashboardFragmentLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="DASHBOARD DETAILS"
+            android:textColor="@color/white"
+            android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

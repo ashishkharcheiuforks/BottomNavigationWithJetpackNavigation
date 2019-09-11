@@ -13,10 +13,18 @@
         <action
                 android:id="@+id/action_dashboard_details_to_dashboardDetails"
                 app:destination="@id/dashboardDetails" />
+        <action
+                android:id="@+id/action_dashboard_details_to_notificationDetails"
+                app:destination="@id/notificationDetails" />
     </fragment>
     <fragment
             android:id="@+id/dashboardDetails"
             android:name="cl.ivanmoya.navigationjetpacklatam.navigation.dashboard.DashboardDetails2"
             android:label="fragment_dashboard_details2"
             tools:layout="@layout/fragment_dashboard_details2" />
+    <fragment
+            android:id="@+id/notificationDetails"
+            android:name="cl.ivanmoya.navigationjetpacklatam.navigation.notification.NotificationDetails"
+            android:label="fragment_notification_details"
+            tools:layout="@layout/fragment_notification_details" />
 </navigation>

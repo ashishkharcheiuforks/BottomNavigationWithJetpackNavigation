@@ -26,5 +26,9 @@ class DashboardDetails : Fragment() {
             it.findNavController().navigate(R.id.action_dashboard_details_to_dashboardDetails)
         }
 
+        openNotificationDetail.setOnClickListener {
+            it.findNavController().navigate(R.id.action_dashboard_details_to_notificationDetails)
+        }
+
     }
 }

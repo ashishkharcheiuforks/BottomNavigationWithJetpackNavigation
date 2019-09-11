@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
 import cl.ivanmoya.navigationjetpacklatam.R
 import kotlinx.android.synthetic.main.fragment_dashboard.*
 import kotlin.LazyThreadSafetyMode.NONE
@@ -34,7 +35,21 @@ class Dashboard : Fragment() {
         }
 
         openNavigationNotification.setOnClickListener {
-            it.findNavController().navigate(R.id.navigation_notification)
+
+            val finalHost = NavHostFragment.create(R.navigation.navigation_dashboard_details)
+            fragmentManager?.beginTransaction()?.replace(detailDashboard.id, finalHost)
+                ?.setPrimaryNavigationFragment(finalHost)
+                ?.commit()
+
+//            supportFragmentManager.beginTransaction()
+//                .replace(R.id.nav_host, finalHost)
+//                .setPrimaryNavigationFragment(finalHost) // this is the equivalent to app:defaultNavHost="true"
+//                .commit()
+
+
+//            val navHostFragment: NavHostFragment = fragmentManager?.findFragmentById(R.id.navigation_dashboard) as NavHostFragment
+//            val navController = navHostFragment.navController
+//            navController.navigateUp()
         }
     }
 }

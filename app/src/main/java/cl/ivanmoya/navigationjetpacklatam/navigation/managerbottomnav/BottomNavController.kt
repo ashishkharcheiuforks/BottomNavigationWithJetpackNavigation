@@ -68,7 +68,7 @@ class BottomNavController(
     fun onNavigationItemSelected(itemId: Int = navigationBackStack.last()): Boolean {
 
         // Replace fragment representing a navigation item
-        val fragment = fragmentManager.findFragmentByTag(itemId.toString())
+        val navHost = fragmentManager.findFragmentByTag(itemId.toString())
             ?: NavHostFragment.create(
                 navGraphProvider?.getNavGraphId(itemId)
                     ?: throw RuntimeException(
@@ -83,7 +83,7 @@ class BottomNavController(
 //                        R.anim.nav_default_pop_enter_anim,
 //                        R.anim.nav_default_pop_exit_anim
 //                )
-            .replace(containerId, fragment, itemId.toString())
+            .replace(containerId, navHost, itemId.toString())
             .addToBackStack(null)
             .commit()
 

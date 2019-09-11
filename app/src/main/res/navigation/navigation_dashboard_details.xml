@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            xmlns:tools="http://schemas.android.com/tools"
-            android:id="@+id/navigation_dashboard_details"
-            app:startDestination="@id/dashboard_details">
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/navigation_dashboard_details"
+        app:startDestination="@id/dashboard_details">
 
     <fragment
             android:id="@+id/dashboard_details"
@@ -12,11 +12,11 @@
             tools:layout="@layout/fragment_dashboard_details">
         <action
                 android:id="@+id/action_dashboard_details_to_dashboardDetails"
-                app:destination="@id/dashboardDetails"/>
+                app:destination="@id/dashboardDetails" />
     </fragment>
     <fragment
             android:id="@+id/dashboardDetails"
             android:name="cl.ivanmoya.navigationjetpacklatam.navigation.dashboard.DashboardDetails2"
             android:label="fragment_dashboard_details2"
-            tools:layout="@layout/fragment_dashboard_details2"/>
+            tools:layout="@layout/fragment_dashboard_details2" />
 </navigation>
